@@ -1,0 +1,174 @@
+Script started on 2026-10-26 16:08:27+05:00 [TERM="dumb" TTY="/dev/pts/0" COLUMNS="153" LINES="38"]
+jawadpc@ubuntu:~/Desktop$ id
+uid=1000(jawadpc) gid=1000(jawadpc) groups=1000(jawadpc),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users),111(lpadmin),114(lxd),974(vboxsf)
+jawadpc@ubuntu:~/Desktop$ ls -l
+total 4
+-rw-rw-r-- 1 jawadpc jawadpc   0 Oct 26 16:08 session1_log.txt
+-rw-rw-r-- 1 jawadpc jawadpc 204 Oct 26 16:07 session_log.txt
+jawadpc@ubuntu:~/Desktop$ ls -l /etc/password
+ls: cannot access '/etc/password': No such file or directory
+jawadpc@ubuntu:~/Desktop$ ls -l /etc/passwd
+-rw-r--r-- 1 root root 2820 Oct 26 15:41 /etc/passwd
+jawadpc@ubuntu:~/Desktop$ cd de  Desktop
+bash: cd: Desktop: No such file or directory
+jawadpc@ubuntu:~/Desktop$ touch myfile.txt
+jawadpc@ubuntu:~/Desktop$ ls -l
+total 4
+-rw-rw-r-- 1 jawadpc jawadpc   0 Oct 26 16:11 myfile.txt
+-rw-rw-r-- 1 jawadpc jawadpc   0 Oct 26 16:08 session1_log.txt
+-rw-rw-r-- 1 jawadpc jawadpc 204 Oct 26 16:07 session_log.txt
+jawadpc@ubuntu:~/Desktop$ chmod 777 myfile.txt
+jawadpc@ubuntu:~/Desktop$ ls -l
+total 4
+-rwxrwxrwx 1 jawadpc jawadpc   0 Oct 26 16:11 myfile.txt
+-rw-rw-r-- 1 jawadpc jawadpc   0 Oct 26 16:08 session1_log.txt
+-rw-rw-r-- 1 jawadpc jawadpc 204 Oct 26 16:07 session_log.txt
+jawadpc@ubuntu:~/Desktop$ ls -l myfile.txt
+-rwxrwxrwx 1 jawadpc jawadpc 0 Oct 26 16:11 myfile.txt
+jawadpc@ubuntu:~/Desktop$ chmod u=r,go-rwx myfile.txt
+jawadpc@ubuntu:~/Desktop$ ls -l myfile.txt
+-r-------- 1 jawadpc jawadpc 0 Oct 26 16:11 myfile.txt
+jawadpc@ubuntu:~/Desktop$ un mask       mask 0022
+Command 'unmask' not found, did you mean:
+  command 'unmass' from deb unmass (0.9-8build1)
+Try: sudo apt install <deb name>
+jawadpc@ubuntu:~/Desktop$ umask 0022
+jawadpc@ubuntu:~/Desktop$ touch myfile.txt
+jawadpc@ubuntu:~/Desktop$ ls -l myfile, .txt
+-r-------- 1 jawadpc jawadpc 0 Oct 26 16:15 myfile.txt
+jawadpc@ubuntu:~/Desktop$ umask 111
+jawadpc@ubuntu:~/Desktop$ touch myfile2.txt
+jawadpc@ubuntu:~/Desktop$ ls -l myfile2.txt
+-rw-rw-rw- 1 jawadpc jawadpc 0 Oct 26 16:16 myfile2.txt
+jawadpc@ubuntu:~/Desktop$ u mask 333
+u: command not found
+jawadpc@ubuntu:~/Desktop$ umask 333
+jawadpc@ubuntu:~/Desktop$ touch mu yfile.txt    3.txt
+jawadpc@ubuntu:~/Desktop$ ls -l mufile3, .txt
+ls: cannot access 'mufile3.txt': No such file or directory
+jawadpc@ubuntu:~/Desktop$ la -l myfil3 e3.txt
+-r--r--r-- 1 jawadpc jawadpc 0 Oct 26 16:17 myfile3.txt
+jawadpc@ubuntu:~/Desktop$ sudo adduser awa    aw   AWAN
+[sudo: authenticate] Password: *********         
+sudo: Authentication failed, try again.
+[sudo: authenticate] Password: *********         
+New password: 
+BAD PASSWORD: The password contains the user name in some form
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for AWAN
+Enter the new value, or press ENTER for the default
+	Full Name []: jawad Ahmed
+	Room Number []: 26
+	Work Phone []: 03125227153
+	Home Phone []: 112233
+	Other []: m no
+Is the information correct? [Y/n] y
+jawadpc@ubuntu:~/Desktop$ su -AWa AN     AWAN
+Password: 
+AWAN@ubuntu:~$ exit
+logout
+jawadpc@ubuntu:~/Desktop$ ls -l myfile.txt
+-r-------- 1 jawadpc jawadpc 0 Oct 26 16:15 myfile.txt
+jawadpc@ubuntu:~/Desktop$ choe wn aliahmed myfile.txt myfile.txt  myfile.txt  myfile.txt  myfile.txt  myfile.txt  myfile.txt  myfile.txt  myfile.txt A myfile.txtW myfile.txtA myfile.txtN myfile.txtjawadpc@ubuntu:~/Desktop$ chown AWAN  myfile.txt
+chown: changing ownership of 'myfile.txt': Operation not permitted (os error 1)
+jawadpc@ubuntu:~/Desktop$ sudo choe wm n AWAN mu yfile.txt
+jawadpc@ubuntu:~/Desktop$ ls -l myfile.txt
+-r-------- 1 AWAN jawadpc 0 Oct 26 16:15 myfile.txt
+jawadpc@ubuntu:~/Desktop$ sudo -i
+root@ubuntu:~# cd ~/Desktop
+-bash: cd: /root/Desktop: No such file or directory
+root@ubuntu:~# cd..
+cd..: command not found
+root@ubuntu:~# cd ..
+root@ubuntu:/# cd home    /home/jawadpc/DE esktop
+root@ubuntu:/home/jawadpc/Desktop# su -jawadpc
+su: invalid option -- 'j'
+Try 'su --help' for more information.
+root@ubuntu:/home/jawadpc/Desktop# suy -  -jawadpc
+su: invalid option -- 'j'
+Try 'su --help' for more information.
+root@ubuntu:/home/jawadpc/Desktop# cd ..
+root@ubuntu:/home/jawadpc# cd..
+cd..: command not found
+root@ubuntu:/home/jawadpc# cd ..
+root@ubuntu:/home# cd ..
+root@ubuntu:/# su -jawadpc
+su: invalid option -- 'j'
+Try 'su --help' for more information.
+root@ubuntu:/# su - jawadpc
+jawadpc@ubuntu:~$ mkdir /test
+mkdir: /test: File exists
+jawadpc@ubuntu:~$ cd desktop       DESktop
+-bash: cd: DESktop: No such file or directory
+jawadpc@ubuntu:~$ pwd
+/home/jawadpc
+jawadpc@ubuntu:~$ cd /home/jawadpc/Desktop
+jawadpc@ubuntu:~/Desktop$ mkdir /test
+mkdir: /test: File exists
+jawadpc@ubuntu:~/Desktop$ mkdir /test1
+mkdir: /test1: File exists
+jawadpc@ubuntu:~/Desktop$ rm -r /test
+rm: cannot remove '/test': Permission denied
+jawadpc@ubuntu:~/Desktop$ dudo -i       sudo -i
+[sudo: authenticate] Password: *********         
+root@ubuntu:~# rm -r /test
+root@ubuntu:~# rm -r /test1
+root@ubuntu:~# ls /
+bin  boot  bsse	 cdrom	dev  dir1  etc	home  lib  lib64  lost+found  media  mnt  opt  proc  root  run	sbin  snap  srv	 sys  tmp  usr	var
+root@ubuntu:~# sudo - jawadpc
+sudo: 'jawadpc': command not found
+root@ubuntu:~# su - jawadpc
+jawadpc@ubuntu:~$ mkdir /test
+mkdir: Permission denied
+jawadpc@ubuntu:~$ sudo -i
+[sudo: authenticate] Password: *********         
+root@ubuntu:~# mkdir /test
+root@ubuntu:~# chmod 777 /test
+root@ubuntu:~# ls -ld /test
+drwxrwxrwx 2 root root 4096 Oct 26 16:35 /test
+root@ubuntu:~# touch /test/testfile.txt
+root@ubuntu:~# exho   cho "this is ab  test filr e."> /tesr t/testfile.txt
+root@ubuntu:~# chmod 400 /test/testfile.txt
+root@ubuntu:~# ls -l /test/testfile.txt
+-r-------- 1 root root 21 Oct 26 16:37 /test/testfile.txt
+root@ubuntu:~# adduser       sudo adduser khan    jawad
+New password: 
+BAD PASSWORD: The password contains the user name in some form
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for jawad
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] 
+root@ubuntu:~# su - jawad
+jawad@ubuntu:~$ cat /test/testfile.txt
+cat: /test/testfile.txt: Permission denied
+jawad@ubuntu:~$ exit
+logout
+root@ubuntu:~# chmod 777 /test/testfile.txt
+root@ubuntu:~# ls -l /test/testfile.txt
+-rwxrwxrwx 1 root root 21 Oct 26 16:37 /test/testfile.txt
+root@ubuntu:~# su - jawad
+jawad@ubuntu:~$ cat /test/testfile.txt
+this is a test file.
+jawad@ubuntu:~$ exit
+logout
+root@ubuntu:~# exit
+logout
+jawadpc@ubuntu:~$ exit
+logout
+root@ubuntu:~# exit
+logout
+jawadpc@ubuntu:~/Desktop$ exit
+logout
+root@ubuntu:/# exit
+logout
+jawadpc@ubuntu:~/Desktop$ exit
+exit
+
+Script done on 2026-10-26 16:44:16+05:00 [COMMAND_EXIT_CODE="0"]
